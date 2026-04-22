@@ -42,7 +42,41 @@ function rc() {
 # repopick 2137 # hello
 #
 
-# build/make
-repopick -f 332045 # Don't enforce vintf kernel requirements when building without LTO
+# device/lineage/sepolicy
+repopickchain 431717 # common: Label ro.lineage.device prop
+
+# device/qcom/sepolicy_vndr/legacy-um
+repopickchain 469528 # BACKPORT: sepolicy_vndr: Provide net_admin capability for lowi-server
+
+# frameworks/base
+repopickchain 475400 # SystemUI: Fix loading of brightness icons on moving slider
+repopickchain 474452 # Support select and l1/r1 to control brightness
+
+# hardware/interfaces
+repopickchain 469436 # Health: Indicate missing battery properties with -1
+
+# hardware/qcom-caf/common
+repopickchain 477487 # libqti-perfd-client: Reset Power HAL on binder death
+
+# hardware/qcom-caf/sm8350/display
+repopickchain 474977 # sdm: Operate FINGERPRINT_MASK for oplus optical UDFPS
+
+# lineage-sdk
+repopickchain 474451 # lineage-sdk: Add setting for atv brightness buttons
+
+# packages/apps/Settings
+repopickchain 474721 # Settings: Fix custom Private DNS hostname being overwritten
+
+# packages/apps/TvSettings
+repopickchain 474450 # TvSettings: Support brightness button combo
+
+# packages/apps/WallpaperPicker2
+repopickchain 471202 # Update settings repository to latest interface
+
+# packages/modules/Permission
+repopickchain 474328 # PermissionController: Add missing permission groups
+
+# vendor/lineage
+repopickchain 477314 # overlay: Update DocumentsUIOverlay
 
 wait
